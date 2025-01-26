@@ -18,7 +18,7 @@ cd "$REPO_VERZEICHNIS" || {
 
 # Status überprüfen
 if [[ -n $(git status --porcelain) ]]; then
-    echo -e "\033[0;33mÄnderungen erkannt. Vorbereitung zum Commit und Push...\033[0m"
+    echo -e "\033[0;34mÄnderungen erkannt. Vorbereitung zum Commit und Push...\033[0m"
 
     # Alle Änderungen stagen
     git add . || {
@@ -36,7 +36,7 @@ if [[ -n $(git status --porcelain) ]]; then
     # Push durchführen
     echo -e "\033[0;32mÄnderungen werden ins Remote-Repository gepusht...\033[0m"
     if git push; then
-        echo -e "\033[0;32mPush erfolgreich!\033[0m"
+        echo -e "\033[0;34mPush erfolgreich!\033[0m"
     else
         echo -e "\033[0;31mPush fehlgeschlagen!\033[0m"
         exit 1

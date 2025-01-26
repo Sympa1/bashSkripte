@@ -17,14 +17,14 @@ cd "$REPO_VERZEICHNIS" || {
 }
 
 # Git Pull ausführen
-echo -e "\033[0;32mPull aus dem Repository...\033[0m"
+echo -e "\033[0;34mPull aus dem Repository...\033[0m"
 pull_output=$(git pull)
 
 if [[ $pull_output == *"Bereits aktuell"* ]]; then
-    echo -e "\033[0;33mBereits aktuell.\033[0m"
+    echo -e "\033[0;34mBereits aktuell.\033[0m"
 else
     if [[ $? -eq 0 ]]; then
-        echo -e "\033[0;32mPull erfolgreich abgeschlossen!\033[0m"
+        echo -e "\033[0;34mPull erfolgreich abgeschlossen!\033[0m"
     else
         echo -e "\033[0;31mPull fehlgeschlagen!\033[0m"
         exit 1
